@@ -32,7 +32,7 @@
 
       $log.debug("Links: ", links);
 
-      _.forEach(links, function (link) {
+      angular.forEach(links, function (link) {
         _parseElement(link, linkHeaderObject);
       });
 

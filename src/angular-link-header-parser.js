@@ -28,7 +28,7 @@
       if ( linkHeader.length == 0 )
         return new Error("Empty string provided!");
 
-      var links = linkHeader.split(",");
+      var links = linkHeader.split("<").splice(1);
 
       $log.debug("Links: ", links);
 

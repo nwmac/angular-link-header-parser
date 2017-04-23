@@ -29,7 +29,7 @@
       if ( linkHeader.length == 0 )
         return new Error("Empty string provided!");
 
-      var links = linkHeader.split(",");
+      var links = linkHeader.split("<").splice(1);
 
       $log.debug("Links: ", links);
 
@@ -72,14 +72,11 @@
     function _parseRelElement(relElement) {
       $log.debug("REL element to parse: ", relElement);
 
-      var items = relElement.split("=");
+      var rel = relElement.match(/rel=["']?((?:.(?!["']?\s+(?:\S+)=|[>"']))+.)["']?/).slice(1);
 
-      items[ 1 ] = items[ 1 ].trim().toLowerCase();
-      items[ 1 ] = items[ 1 ].replace(/"/g, "");
+      $log.debug("Parsed REL element: ", rel);
 
-      $log.debug("Parsed REL element: ", items[ 1 ]);
-
-      return items[ 1 ];
+      return rel;
     }
 
     /**

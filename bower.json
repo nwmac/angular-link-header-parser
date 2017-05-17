@@ -1,5 +1,5 @@
 {
-  "name"        : "angular-link-header-parser",
+  "name"        : "angular-link-header-parser-ng",
   "version"     : "1.0.2",
   "authors"     : [
     {
@@ -16,13 +16,16 @@
     "test",
     "tests"
   ],
+  "main": [
+    "release/angular-link-header-parser.js"
+  ],
   "dependencies": {
     "angular" : "~1.4.5",
     "uri-util": "~1.1.0"
   },
   "repository"  : {
     "type": "git",
-    "url" : "https://github.com/igorissen/angular-link-header-parser.git"
+    "url" : "https://github.com/nwmac/angular-link-header-parser.git"
   },
   "keywords"    : [
     "headers",
